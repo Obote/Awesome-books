@@ -14,3 +14,14 @@ function Book(title, author){
   idBook += 1;
 }
 
+function reloadLibrary() {
+  library = JSON.parse(localStorage.library);
+
+  bookShelf.innerHTML = '';
+  bookShelf.appendChild(book);
+
+  for (let i = 0; i < library.length; i += 1) {
+    displayBook(library[i]);
+  }
+}
+
