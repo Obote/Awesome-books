@@ -25,3 +25,13 @@ function reloadLibrary() {
   }
 }
 
+function saveBook(title, author){
+  const book = new Book(title, author);
+  if (!Array.isArray(library)){
+    library = [];
+  }
+  library.push(book);
+  localStorage.library = JSON.stringify(library);
+  reloadLibrary();
+}
+
