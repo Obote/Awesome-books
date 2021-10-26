@@ -35,3 +35,15 @@ function saveBook(title, author){
   reloadLibrary();
 }
 
+function addBook(){
+  event.preventDefault();
+  const formAddBook = document.forms.addBook;
+  const bookData = new FormData(formAddBook);
+
+  const bookTitle = bookData.get('title');
+  const bookAuthor = bookData.get('author');
+
+  formAddBook.reset();
+
+  saveBook(bookTitle, bookAuthor);
+}
