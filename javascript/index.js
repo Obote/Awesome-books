@@ -47,3 +47,10 @@ function addBook(){
 
   saveBook(bookTitle, bookAuthor);
 }
+function deleteBook(id) {
+  library = library.filter((book) => book.id !== id);
+
+  localStorage.library = JSON.stringify(library);
+
+  reloadLibrary();
+}
