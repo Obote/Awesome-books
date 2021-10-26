@@ -2,7 +2,7 @@ const { constant } = require("async");
 
 let library = [];
 
-const book = document.querySelector('.book');
+const booklet = document.querySelector('.book');
 const bookShelf = document.querySelector('#bookShelf');
 let idBook = library.length;
 
@@ -18,7 +18,7 @@ function reloadLibrary() {
   library = JSON.parse(localStorage.library);
 
   bookShelf.innerHTML = '';
-  bookShelf.appendChild(book);
+  bookShelf.appendChild(booklet);
 
   for (let i = 0; i < library.length; i += 1) {
     displayBook(library[i]);
@@ -36,7 +36,7 @@ function saveBook(title, author){
 }
 
 function addBook(){
-  event.preventDefault();
+  e.preventDefault();
   const formAddBook = document.forms.addBook;
   const bookData = new FormData(formAddBook);
 
@@ -47,6 +47,7 @@ function addBook(){
 
   saveBook(bookTitle, bookAuthor);
 }
+
 function deleteBook(id) {
   library = library.filter((book) => book.id !== id);
 
@@ -54,3 +55,16 @@ function deleteBook(id) {
 
   reloadLibrary();
 }
+
+
+function displayBook(book) {
+  const clon = book.content.cloneNode(true);
+  clon.querySelectorAll('p')[0].innerHTML = 'BOOK NAME: '+book.title;
+  clon.querySelectorAll('p')[1].innerHTML = 'AUTHOR NAME: '+book.author;
+
+  clon.querySelector('button').addEventListener('click', () => { deleteBook(book.id); });
+
+  bookShelf.appendChild(clon);
+}
+
+reloadLibrary();
