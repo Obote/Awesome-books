@@ -12,28 +12,22 @@
         <h1>Awesome Books</h1>
 
         <div class="bookShelf"> 
-            <div class="book">
-                <p>Book Title</p>
-                <p>Book Author</p>
-                <button>Remove</button>
-            <hr>
-            </div>
+            
         </div>
     </div>
 
     <br>
     <h1>Add New Book</h1>
     <div>
-        <form action="submit" onsubmit="return addBook()" id="addBook">
-            <input type="text" name="title" placeholder="Title of the book" required="">
+        <form action="submit" id="addBook">
+            <input class="title" type="text" name="title" placeholder="Title of the book" required="">
             <br>
-            <input type="text" name="author" placeholder="Author of the book" required="">
+            <input class="author" type="text" name="author" placeholder="Author of the book" required="">
             <br>
-            <button>Add book</button>
+            <button class="submitBtn">Add book</button>
         </form>
     </div>
    
-
     <script src="/javascript/index.js"></script>
 </body>
 </html>
