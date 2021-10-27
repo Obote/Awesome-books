@@ -1,22 +1,23 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Book
 
-> One paragraph statement about the project.
+> Book library with vanilla javascript.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app.png)
 
 Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/)
+- [JS](https://www.javascript.com/)
+
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://obote.github.io/Awesome-books/)
 
 
 ## Getting Started
@@ -29,35 +30,48 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-### Setup
+* No prerequisites needed for this project.
+<!-- ### Setup -->
 
 ### Install
 
+1. Clone the repo
+   ```sh
+   git clone git@github.com:Obote/Awesome-books.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
 ### Usage
 
-### Run tests
+* Practice basic UI usage with vanila Javascript
 
-### Deployment
+<!-- ### Deployment -->
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Denis Obote**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Obote](https://github.com/Obote)
+- Twitter: [@Obote_denis](https://twitter.com/Obote_denis)
+- LinkedIn: [Obote Denis](https://www.linkedin.com/in/obote-denis-9859a2a3/)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
+3. Commit your Changes (`git commit -m 'Add some NewFeature'`)
+4. Push to the Branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
+
 
 Feel free to check the [issues page](../../issues/).
 
@@ -67,9 +81,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Anibal for help complete the project.
 
 ## 📝 License
 
