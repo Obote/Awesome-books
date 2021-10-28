@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style/style.css">
      <title>Awesome Books</title>
 </head>
 <body>
-    <h1>Awesome Books</h1>
-    <div id="store">
-        <ul class="list">
+    <div class="jumbotron text-center">
+        <h1>Awesome Books</h1>
+            <div class="list">
 
-        </ul>
-    </div>
+            </div>
+        </div>
     <div>
-        <div>
-            <form class="form" id="form">
-                <input id="input1" class="input-1" type="text" placeholder="book">
-                <br>
-                <input id="input2" type="text" placeholder="author">
-                <br>
-                <button class="btn-add">Add</button>
-            </form>
+    
+    <br>
+    <h1>Add New Book</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <form class="form" id="form">
+                        <input id="input1" class="input-1 form-control" type="text" placeholder="Title of the book..." required>
+                        <br> 
+                        <input id="input2" class="form-control" type="text " placeholder="Author of the book..." required>
+                        <br>
+                        <button class="btn-add btn btn-danger">Add book</button>
+                </form>
+            </div>
+            <div class="col"></div>
         </div>
     </div>
     <script src="/javascript/index.js"></script>

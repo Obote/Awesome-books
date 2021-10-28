@@ -14,9 +14,9 @@ class Book {
   addBookMethod() {
     books.push({ id: this.id, title: this.title, author: this.author });
 
-    const newBookHTML = `<ul id="${this.id}"><span>${this.title}</span><br/>
-    <span>${this.author}</span><br/>
-    <button id="${this.id}">Remove</button>
+    const newBookHTML = `<ul id="${this.id}"><span>${this.title}&nbsp&nbsp&nbsp&nbsp</span>
+    <span>${this.author}&nbsp&nbsp&nbsp&nbsp</span>
+    <button id="${this.id}" class="btn btn-danger">Remove</button>
     <hr></ul`;
 
     bookHolder.insertAdjacentHTML('beforeend', newBookHTML);
