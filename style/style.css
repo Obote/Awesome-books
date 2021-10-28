@@ -7,3 +7,8 @@ body {
 	text-align: center;
   align-items: center;
 }
+
+.btn-add {
+  display: flex;
+  float: right;
+}
