@@ -1,73 +1,68 @@
-const input = document.querySelector('.input-1');
-const input2 = document.getElementById('input2');
-const addBtn = document.querySelector('.btn-add');
-const ul = document.querySelector('ul');
+let books = [];
+const inputTitle = document.querySelector('#input1');
+const inputAuthor = document.querySelector('#input2');
+const btn = document.querySelector('.btn-add');
+const bookHolder = document.querySelector('.list');
 
-let collection = JSON.parse(localStorage.getItem('book-authors')) || [];
-
-function Awesome(title, author, id) {
-  this.title = title;
-  this.author = author;
-  this.id = id;
-}
-
-function displayBooks() {
-  if (ul.querySelectorAll('li')) {
-    Array.from(ul.querySelectorAll('li')).forEach((bookContainer) => {
-      ul.removeChild(bookContainer);
-    });
+class Book {
+  constructor(id, title, author) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
   }
 
-  collection.forEach((book) => {
-    const li = document.createElement('li');
-    li.className = 'books-li';
-    const author = document.createElement('p');
-    author.className = 'paragraph-1';
-    const bookName = document.createElement('p');
-    bookName.className = 'paragraph-2';
-    const deleteButton = document.createElement('button');
-    deleteButton.id = book.id;
-    deleteButton.className = 'remove-btn';
-    deleteButton.textContent = 'remove';
+  addBookMethod() {
+    books.push({ id: this.id, title: this.title, author: this.author });
 
-    author.textContent = book.author;
-    bookName.textContent = book.title;
+    const newBookHTML = `<ul id="${this.id}"><span>${this.title}</span><br/>
+    <span>${this.author}</span><br/>
+    <button id="${this.id}">Remove</button>
+    <hr></ul`;
 
-    li.appendChild(author);
-    li.appendChild(bookName);
-    li.appendChild(deleteButton);
-    ul.appendChild(li);
-  });
-  // eslint-disable-next-line no-use-before-define
-  assignRemoveBtn();
-}
-displayBooks();
+    bookHolder.insertAdjacentHTML('beforeend', newBookHTML);
 
-function assignRemoveBtn() {
-  if (collection.length) {
-    const removeBtns = Array.from(document.querySelectorAll('.remove-btn'));
+    localStorage.setItem('data', JSON.stringify(books));
+  }
 
-    removeBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const array = [];
-        collection.forEach((book) => {
-          if (parseInt(btn.id, 10) !== book.id) {
-            array.push(book);
-          }
-        });
+  removeBookMethod() {
+    books = books.filter((book) => book.id.toString() !== this.id);
 
-        collection = array;
-        localStorage.setItem('book-authors', JSON.stringify(collection));
-        displayBooks();
-      });
-    });
+    const bookToDelete = document.getElementById(this.id);
+    bookToDelete.remove();
+    localStorage.setItem('data', JSON.stringify(books));
   }
 }
 
-addBtn.addEventListener('click', () => {
-  const inputs = new Awesome(input.value, input2.value, collection.length + 1);
-  collection.push(inputs);
+function addBook() {
+  const id = Math.random();
+  const title = inputTitle.value;
+  const author = inputAuthor.value;
 
-  localStorage.setItem('book-authors', JSON.stringify(collection));
-  displayBooks();
-});
+  const newBook = new Book(id, title, author);
+  newBook.addBookMethod();
+
+  const removeButton = document.getElementById(id);
+  removeButton.addEventListener('click', newBook.removeBookMethod);
+
+  inputTitle.value = '';
+  inputAuthor.value = '';
+}
+btn.addEventListener('click', addBook);
+
+const onLoadBooks = (id, title, author) => {
+  const newBook = new Book(id, title, author);
+  newBook.addBookMethod();
+
+  const removeButton = document.getElementById(id);
+  removeButton.addEventListener('click', newBook.removeBookMethod);
+};
+
+window.onload = function onload() {
+  const tempBooks = JSON.parse(localStorage.getItem('data'));
+
+  if (tempBooks && tempBooks.length) {
+    for (let i = 0; i < tempBooks.length; i += 1) {
+      onLoadBooks(tempBooks[i].id, tempBooks[i].title, tempBooks[i].author);
+    }
+  }
+};
