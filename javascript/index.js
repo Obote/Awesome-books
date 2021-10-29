@@ -90,40 +90,15 @@ function navSection(navItem) {
 }
 navSection();
 
-
-function dateTime() { 
-  const luxonDate = luxon.DateTime.local().setZone('UTC+3'); 
-  const dateFormat = `${luxonDate.monthLong} ${luxonDate.day}th ${luxonDate.year}, ${luxonDate.hour}:${luxonDate.minute}:${luxonDate.second} `; 
+function dateTime() {
+  // eslint-disable-next-line no-undef
+  const luxonDate = luxon.DateTime.local().setZone('UTC+3');
+  const dateFormat = `${luxonDate.monthLong} ${luxonDate.day}th ${luxonDate.year}, ${luxonDate.hour}:${luxonDate.minute}:${luxonDate.second} `;
   console.log(dateFormat);
   document.getElementById('timeDiv').innerHTML = `${dateFormat}`;
 }
 dateTime();
 
-window.onload = function onload(){  
-setInterval(dateTime,100);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const dateFormat = `${luxonDate.monthLong} ${luxonDate.day}th ${luxonDate.year}, ${luxonDate.hour}:${luxonDate.minute}:${luxonDate.second} `;
+window.onload = function onload() {
+  setInterval(dateTime, 100);
+};

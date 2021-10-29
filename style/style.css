@@ -1,5 +1,5 @@
 * {
-  margin: 0px;
+  margin: 0;
 }
 
 body {
@@ -13,22 +13,21 @@ body {
   float: right;
 }
 
-.navbar{
-   display: flex;
+.navbar {
+  display: flex;
   font-size: 30px;
   margin: 0 5%;
   color: antiquewhite;
-  }
+}
 
 .navbar-item {
   display: flex;
-  margin-right: 50px;
-  }
+}
 
 .navbar-item li {
-  padding-left: 20px;
   list-style-type: none;
   padding: 0 30px;
+  float: right;
 }
 
 .navbar a {
@@ -46,7 +45,8 @@ body {
   text-align: center;
 }
 
-.contact h1, p {
+.contact h1,
+p {
   padding-bottom: 30px;
   color: antiquewhite;
 }
@@ -64,5 +64,7 @@ body {
   text-align: end;
   font-weight: 600;
   font-size: 15px;
-  margin: 5px;
+  margin-right: 8%;
+  color: antiquewhite;
+  margin-bottom: 20px;
 }
