@@ -14,7 +14,7 @@ body {
 }
 
 .navbar{
-  display: flex;
+   display: flex;
   font-size: 30px;
   margin: 0 5%;
   color: antiquewhite;
@@ -46,8 +46,9 @@ body {
   text-align: center;
 }
 
-.contact h1 {
+.contact h1, p {
   padding-bottom: 30px;
+  color: antiquewhite;
 }
 
 .contact ul li {
@@ -56,4 +57,5 @@ body {
   padding: 10px 0;
   text-align: left;
   padding-left: 40%;
+  color: antiquewhite;
 }
