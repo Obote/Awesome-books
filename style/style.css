@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 0px;
 }
 
 body {
@@ -11,4 +11,27 @@ body {
 .btn-add {
   display: flex;
   float: right;
+}
+
+.navbar{
+  display: flex;
+  font-size: 30px;
+  margin: 0 5%;
+  color: antiquewhite;
+  }
+
+.navbar-item {
+  display: flex;
+  margin-right: 50px;
+  }
+
+.navbar-item li {
+  padding-left: 20px;
+  list-style-type: none;
+  padding: 0 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: antiquewhite;
 }
