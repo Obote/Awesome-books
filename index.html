@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
      <title>Awesome Books</title>
 </head>
-<body>
+<body>   
     <nav class="navbar">
         <a href="#">Awesome Books</a>
         <ul class="navbar-item">
@@ -16,6 +17,7 @@
             <a href="#" onclick="navSection('addBook')"><li>Add Books</li></a>
             <a href="#" onclick="navSection('contact')"><li>Contact</li></a>
         </ul>
+        <p class="timeDiv" id="timeDiv"></p>
     </nav>
     <section id="bookList">
         <div class="jumbotron text-center ">
@@ -54,6 +56,7 @@
         </ul>
     </section>
     <script src="/javascript/index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script> -->
 </body>
 <footer class="footer">
     <div>
