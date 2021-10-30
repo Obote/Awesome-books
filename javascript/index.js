@@ -66,3 +66,37 @@ window.onload = function onload() {
     }
   }
 };
+
+// Navigation section
+
+function navSection(navItem) {
+  const booklist = document.getElementById('bookList');
+  const addbook = document.getElementById('addBook');
+  const cont = document.getElementById('contact');
+
+  if (navItem === 'bookList') {
+    booklist.style.display = 'block';
+    addbook.style.display = 'none';
+    cont.style.display = 'none';
+  } else if (navItem === 'addBook') {
+    addbook.style.display = 'block';
+    booklist.style.display = 'none';
+    cont.style.display = 'none';
+  } else {
+    cont.style.display = 'block';
+    booklist.style.display = 'none';
+    addbook.style.display = 'none';
+  }
+}
+navSection();
+
+function dateTime() {
+  // eslint-disable-next-line no-undef
+  const luxonDate = luxon.DateTime.local();
+  const dateFormat = `${luxonDate.monthLong} ${luxonDate.day}th ${luxonDate.year}, ${luxonDate.hour}:${luxonDate.minute}:${luxonDate.second} `;
+  document.getElementById('timeDiv').innerHTML = `${dateFormat}`;
+}
+dateTime();
+window.onload = function onload() {
+  setInterval(dateTime, 100);
+};

@@ -6,34 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
      <title>Awesome Books</title>
 </head>
-<body>
-    <div class="jumbotron text-center">
-        <h1>Awesome Books</h1>
-            <div class="list">
-
-            </div>
+<body>   
+    <nav class="">
+        <div class="navbar">
+            <a href="#">Awesome Books</a>
+            <ul class="navbar-item">
+                <a href="#" onclick="navSection('bookList')"><li>List</li></a>
+                <a href="#" onclick="navSection('addBook')"><li>Add Books</li></a>
+                <a href="#" onclick="navSection('contact')"><li>Contact</li></a>
+            </ul>
         </div>
-    <div>
+        <div class="timeDiv" id="timeDiv"></div>
+    </nav>
+    <section id="bookList">
+        <div class="jumbotron text-center ">
+            <h1>Awesome Books</h1>
+                <div class="list">
+    
+                </div>
+        </div>
+    </section>
     
     <br>
-    <h1>Add New Book</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col">
-                <form class="form" id="form">
-                        <input id="input1" class="input-1 form-control" type="text" placeholder="Title of the book..." required>
-                        <br> 
-                        <input id="input2" class="form-control" type="text " placeholder="Author of the book..." required>
-                        <br>
-                        <button class="btn-add btn btn-danger">Add book</button>
-                </form>
+    <div class="container" id="addBook">
+        <h1>Add New Book</h1>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <form class="form" id="form">
+                            <input id="input1" class="input-1 form-control" type="text" placeholder="Title of the book..." required>
+                            <br> 
+                            <input id="input2" class="form-control" type="text " placeholder="Author of the book..." required>
+                            <br>
+                            <button class="btn-add btn btn-danger">Add book</button>
+                    </form>
+                </div>
+                <div class="col"></div>
             </div>
-            <div class="col"></div>
-        </div>
     </div>
+    <section class="contact" id="contact">
+        <h1>Contact Information</h1>
+        <p>Do have any questions or you want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul>
+            <li>Our email: obotedenis256@gmail.com</li>
+            <li>our phone number: +256772335528</li>
+            <li><address>Our address: Lowerchurchil drive, plot 89, Gulu, Uganda</address></li>
+        </ul>
+    </section>
     <script src="/javascript/index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script> -->
 </body>
+<footer class="footer">
+    <div>
+        <p>Copyright @Obote</p>
+    </div>
+</footer>
 </html>

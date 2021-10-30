@@ -12,3 +12,59 @@ body {
   display: flex;
   float: right;
 }
+
+.navbar {
+  display: flex;
+  font-size: 30px;
+  margin: 0 5%;
+  color: antiquewhite;
+}
+
+.navbar-item {
+  display: flex;
+}
+
+.navbar-item li {
+  list-style-type: none;
+  padding: 0 30px;
+  float: right;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.contact h1,
+p {
+  padding-bottom: 30px;
+  color: antiquewhite;
+}
+
+.contact ul li {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 10px 0;
+  text-align: left;
+  padding-left: 40%;
+  color: antiquewhite;
+}
+
+.timeDiv {
+  text-align: end;
+  font-weight: 600;
+  font-size: 15px;
+  margin-right: 8%;
+  color: antiquewhite;
+  margin-bottom: 20px;
+}
