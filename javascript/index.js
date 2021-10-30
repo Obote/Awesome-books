@@ -92,12 +92,11 @@ navSection();
 
 function dateTime() {
   // eslint-disable-next-line no-undef
-  const luxonDate = luxon.DateTime.local().setZone('UTC+3');
+  const luxonDate = luxon.DateTime.local();
   const dateFormat = `${luxonDate.monthLong} ${luxonDate.day}th ${luxonDate.year}, ${luxonDate.hour}:${luxonDate.minute}:${luxonDate.second} `;
   document.getElementById('timeDiv').innerHTML = `${dateFormat}`;
 }
 dateTime();
-
 window.onload = function onload() {
   setInterval(dateTime, 100);
 };
